@@ -12,7 +12,9 @@ import java.util.Set;
 
 import org.junit.Test;
 
-public class LinkedListTest {
+import com.glispa.hard.DuplicatePairsCounter;
+
+public class GlispaTasksTest {
 
 	@Test
 //	@Ignore
@@ -44,51 +46,8 @@ public class LinkedListTest {
 	@Test
 	public void testFindPairs() {
 		int[]A = {3,5,6,3,3,5};
-		assertEquals(4, findPairs(A));
-	}
-	static int findPairs(int[]A){
-		int pairsCounter = 0;
-		Arrays.sort(A);
-		for (int i = 0; i < A.length; i++) {
-			for (int j = 0; j < A.length; j++) {
-				if(i == j || i > j){
-					continue;
-				}
-				if(A[i] == A[j]){
-					pairsCounter++;
-				}else{
-					break;
-				}
-			}
-		}
-		
-		return pairsCounter;
+		assertEquals(4, DuplicatePairsCounter.findDuplicatePairsCount(A));
 	}
 	
-	static class PairValue{
-		private Integer v1;
-		private Integer v2;
-		
-		public PairValue(Integer v1, Integer v2){
-			this.v1=v1;
-			this.v2=v2;
-		}
-
-		public Integer getV1() {
-			return v1;
-		}
-
-		public void setV1(Integer v1) {
-			this.v1 = v1;
-		}
-
-		public Integer getV2() {
-			return v2;
-		}
-
-		public void setV2(Integer v2) {
-			this.v2 = v2;
-		}
-		
-	}
+	
 }
