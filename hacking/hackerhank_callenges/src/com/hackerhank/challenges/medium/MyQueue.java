@@ -13,7 +13,6 @@ public class MyQueue<T> {
 	public T peek() {
 		putOldestFirst(stackNewestOnTop, stackOldestOnTop);
 		return stackOldestOnTop.peek();
-
 	}
 
 	public T dequeue() {
