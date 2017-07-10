@@ -4,7 +4,6 @@ package com.wallethub.challenge.service;
 public class Palindrome {
 
 	
-//	Algorithm complexity O(logn)
 	public static boolean isPalindrome(String source){
 		int n = source.length() - 1;
 		if(n <= 1){
